@@ -1,4 +1,4 @@
-package com.uvg.gt;
+package com.stackvectorcalculator;
 
 import java.util.EmptyStackException;
 
