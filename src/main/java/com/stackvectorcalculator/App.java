@@ -1,13 +1,11 @@
 package com.stackvectorcalculator;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import java.util.ArrayList;
+
+public class App {
+    public static void main(String[] args) {
+        PostixFileReader reader = new PostixFileReader("datos.txt");
+        final ArrayList<String> expressions = reader.readExpressions();
+        System.out.println(expressions.size());
     }
 }
