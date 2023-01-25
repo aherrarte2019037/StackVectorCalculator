@@ -7,5 +7,10 @@ public class App {
         PostixFileReader reader = new PostixFileReader("datos.txt");
         final ArrayList<String> expressions = reader.readExpressions();
         System.out.println(expressions.size());
+
+        Calculadora c = new Calculadora();
+        c.evaluate(expressions.get(0));
+
+
     }
 }
