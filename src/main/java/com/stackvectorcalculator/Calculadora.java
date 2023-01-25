@@ -3,7 +3,7 @@ package com.stackvectorcalculator;
 import java.sql.SQLOutput;
 
 public class Calculadora implements ICalculator{
-    StackVector<Double> stack = new StackVector<Double>();
+    StackVector<Double> stack = new StackVector<>();
 
     @Override
     public double evaluate(String expression) throws ArithmeticException {
@@ -18,8 +18,19 @@ public class Calculadora implements ICalculator{
                 if (e.equals("+")||e.equals("-")||e.equals("*")||e.equals("/")){
                     double operandoB = getPrevious();
                     double operandoA = getPrevious();
-                    if (e.equals("+")){
-                        stack.push(operandoA + operandoB);
+                    switch (e) {
+                        case "+":
+                            stack.push(operandoA + operandoB);
+                            break;
+                        case "-":
+                            stack.push(operandoA - operandoB);
+                            break;
+                        case "*":
+                            stack.push(operandoA * operandoB);
+                            break;
+                        case "/":
+                            stack.push(operandoA / operandoB);
+                            break;
                     }
 
                 }else { // cuando es un operando se realiza push

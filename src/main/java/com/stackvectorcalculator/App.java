@@ -9,8 +9,7 @@ public class App {
         System.out.println(expressions.size());
 
         Calculadora c = new Calculadora();
-        c.evaluate(expressions.get(0));
-
+        System.out.println(c.evaluate(expressions.get(0)));
 
     }
 }
