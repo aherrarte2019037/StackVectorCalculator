@@ -1,7 +1,5 @@
 package com.stackvectorcalculator;
 
-import java.sql.SQLOutput;
-
 public class Calculadora implements ICalculator{
     StackVector<Double> stack = new StackVector<>();
 

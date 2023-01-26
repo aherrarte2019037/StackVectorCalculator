@@ -6,10 +6,11 @@ public class App {
     public static void main(String[] args) {
         PostixFileReader reader = new PostixFileReader("datos.txt");
         final ArrayList<String> expressions = reader.readExpressions();
-        System.out.println(expressions.size());
+        Calculadora calc = new Calculadora();
 
-        Calculadora c = new Calculadora();
-        System.out.println(c.evaluate(expressions.get(0)));
-
+        for (int i = 0; i < expressions.size(); i++) {
+            System.out.print("Result " + (i + 1) + " = ");
+            System.out.println(calc.evaluate(expressions.get(i)));
+        }
     }
 }
