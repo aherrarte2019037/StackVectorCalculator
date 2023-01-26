@@ -3,7 +3,7 @@ package com.stackvectorcalculator;
 import java.util.EmptyStackException;
 import java.util.Vector;
 
-public class StackVector<E> implements Stack<E> {
+public class StackVector<E> implements IStack<E> {
     protected Vector<E> data = new Vector<E>(1);
 
     // Add new element to top
