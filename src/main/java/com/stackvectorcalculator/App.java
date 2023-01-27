@@ -30,7 +30,12 @@ public class App {
 
         for (int i = 0; i < expressions.size(); i++) {
             System.out.print("Result " + (i + 1) + " = ");
-            System.out.println(calc.evaluate(expressions.get(i)));
+            try{
+                System.out.println(calc.evaluate(expressions.get(i)));
+            }catch(NumberFormatException numberFormatException){
+                System.out.println("Error: no se puede operar una letra");
+            }
+            
         }
     }
 }

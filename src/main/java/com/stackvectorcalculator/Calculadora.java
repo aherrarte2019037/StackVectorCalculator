@@ -51,7 +51,11 @@ public class Calculadora implements ICalculator{
                             stack.push(operandoA * operandoB);
                             break;
                         case "/":
-                            stack.push(operandoA / operandoB);
+                            if(operandoB == 0){
+                                stack.push(0.0);
+                            }else{
+                                stack.push(operandoA / operandoB);
+                            }
                             break;
                     }
 
