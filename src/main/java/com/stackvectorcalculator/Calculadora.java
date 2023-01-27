@@ -1,3 +1,23 @@
+/*
+Profesor: Douglas Leonel
+Auxiliar: Fernanda Esquivel y Francisco Castillo
+
+INTEGRANTES: 
+Sergio Alejandro Orellana Colindres, 221122
+Francis Gabriela Aguilar Leal, 22243
+Angel Andres Herrarte Lorenzana, 22873
+
+26/01/2023
+
+Hoja de Trabajo 2 - ADT
+
+Curso: Algoritmos y Estructuras de datos
+Sección: 20
+
+Sirve para hacer todas las operaciones del .txt
+
+*/
+
 package com.stackvectorcalculator;
 
 public class Calculadora implements ICalculator{
@@ -10,9 +30,13 @@ public class Calculadora implements ICalculator{
 
             String e = String.valueOf(expression.charAt(i));
 
-            // verifica si es espacio
+            /*
+             * Verifica si es espacio
+             */
             if (!e.equals(" ")){
-                // reconoce los operadores
+                /*
+                 * Reconoce los diferentes operadores del Postflix
+                 */
                 if (e.equals("+")||e.equals("-")||e.equals("*")||e.equals("/")){
                     double operandoB = getPrevious();
                     double operandoA = getPrevious();
@@ -31,7 +55,10 @@ public class Calculadora implements ICalculator{
                             break;
                     }
 
-                }else { // cuando es un operando se realiza push
+                /*
+                 * Cuando es un operando se realiza el push
+                 */
+                }else { 
                     stack.push(Double.parseDouble(e));
                 }
             }
