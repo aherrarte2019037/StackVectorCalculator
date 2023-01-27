@@ -7,7 +7,7 @@ Sergio Alejandro Orellana Colindres, 221122
 Francis Gabriela Aguilar Leal, 22243
 Angel Andres Herrarte Lorenzana, 22873
 
-26/01/2023
+27/01/2023
 
 Hoja de Trabajo 2 - ADT
 
@@ -66,6 +66,9 @@ public class Calculadora implements ICalculator{
         return getPrevious();
     }
 
+    /*
+     * Obtiene el dato anterior
+     */
     @Override
     public double getPrevious() {
         return stack.pop();
