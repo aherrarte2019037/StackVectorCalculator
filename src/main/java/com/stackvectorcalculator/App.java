@@ -23,6 +23,10 @@ package com.stackvectorcalculator;
 import java.util.ArrayList;
 
 public class App {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         PostixFileReader reader = new PostixFileReader("datos.txt");
         final ArrayList<String> expressions = reader.readExpressions();

@@ -23,6 +23,12 @@ package com.stackvectorcalculator;
 public class Calculadora implements ICalculator{
     StackVector<Double> stack = new StackVector<>();
 
+    
+    /** 
+     * @param expression
+     * @return double
+     * @throws ArithmeticException
+     */
     @Override
     public double evaluate(String expression) throws ArithmeticException {
 
@@ -70,8 +76,10 @@ public class Calculadora implements ICalculator{
         return getPrevious();
     }
 
-    /*
+    
+    /** 
      * Obtiene el dato anterior
+     * @return double
      */
     @Override
     public double getPrevious() {

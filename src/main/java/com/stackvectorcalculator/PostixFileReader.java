@@ -34,8 +34,10 @@ public class PostixFileReader {
         this.path = this.path.concat(filename);
     }
 
-    /*
-     * Reads each line of text file and return it as arraylist
+    
+    /**
+     * Reads each line of text file and return it as arraylist 
+     * @return ArrayList<String>
      */
     public ArrayList<String> readExpressions() {
         final ArrayList<String> expressions = new ArrayList<String>();
